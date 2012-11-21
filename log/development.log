@@ -1,0 +1,98 @@
+  [1m[36m (0.3ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (37.7ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (19.5ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateGigs (20121121194628)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (1.1ms)[0m  [1mCREATE TABLE "gigs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "date" date, "time" time, "url" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20121121194628')
+  [1m[36m (24.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (1.2ms)[0m  select sqlite_version(*)
+  [1m[36m (0.4ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("gigs")
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2012-11-21 19:48:58 +0000
+Served asset /rails.png - 200 OK (65ms)
+
+
+Started GET "/gigs" for 127.0.0.1 at 2012-11-21 19:49:11 +0000
+Processing by GigsController#index as HTML
+  [1m[36mGig Load (0.7ms)[0m  [1mSELECT "gigs".* FROM "gigs" [0m
+  Rendered gigs/index.html.erb within layouts/application (46.7ms)
+Compiled gigs.css  (104ms)  (pid 3573)
+Compiled scaffolds.css  (39ms)  (pid 3573)
+Compiled application.css  (186ms)  (pid 3573)
+Compiled jquery.js  (16ms)  (pid 3573)
+Compiled jquery_ujs.js  (1ms)  (pid 3573)
+Compiled gigs.js  (337ms)  (pid 3573)
+Compiled application.js  (483ms)  (pid 3573)
+Completed 200 OK in 1485ms (Views: 1073.5ms | ActiveRecord: 33.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-21 19:49:14 +0000
+Served asset /application.css - 200 OK (26ms)
+
+
+Started GET "/assets/gigs.css?body=1" for 127.0.0.1 at 2012-11-21 19:49:14 +0000
+Served asset /gigs.css - 200 OK (26ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-11-21 19:49:14 +0000
+Served asset /scaffolds.css - 200 OK (7ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-21 19:49:14 +0000
+Served asset /jquery_ujs.js - 200 OK (13ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-21 19:49:14 +0000
+Served asset /jquery.js - 200 OK (33ms)
+
+
+Started GET "/assets/gigs.js?body=1" for 127.0.0.1 at 2012-11-21 19:49:14 +0000
+Served asset /gigs.js - 200 OK (6ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-11-21 19:49:14 +0000
+Served asset /application.js - 200 OK (20ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2012-11-21 20:51:11 +0000
+Served asset /rails.png - 304 Not Modified (7ms)
+
+
+Started GET "/gigs" for 127.0.0.1 at 2012-11-21 20:51:22 +0000
+Processing by GigsController#index as HTML
+  [1m[36mGig Load (0.4ms)[0m  [1mSELECT "gigs".* FROM "gigs" [0m
+  Rendered gigs/index.html.erb within layouts/application (47.1ms)
+Completed 200 OK in 612ms (Views: 276.6ms | ActiveRecord: 32.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-21 20:51:24 +0000
+Served asset /application.css - 304 Not Modified (13ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-21 20:51:24 +0000
+Served asset /jquery.js - 304 Not Modified (91ms)
+
+
+Started GET "/assets/gigs.js?body=1" for 127.0.0.1 at 2012-11-21 20:51:24 +0000
+Served asset /gigs.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-11-21 20:51:24 +0000
+Served asset /application.js - 304 Not Modified (97ms)
+
+
+Started GET "/assets/gigs.css?body=1" for 127.0.0.1 at 2012-11-21 20:51:24 +0000
+Served asset /gigs.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-21 20:51:24 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-11-21 20:51:24 +0000
+Served asset /scaffolds.css - 304 Not Modified (6ms)
